@@ -105,40 +105,32 @@ export default function AllHabits({
                 <HighlightText text={habit.category} highlight={searchTerm} />
               </span>
             )}
-            
+
             {habit.notes && (
-  <p className="text-sm text-[#F8FAFC] opacity-90 mt-1">
-    📝 {habit.notes}
-  </p>
-)}
+              <p className="text-sm text-[#F8FAFC] opacity-90 mt-1">
+                📝 {habit.notes}
+              </p>
+            )}
 
+            {canTrackStreak && (
+              <div className="flex justify-between items-center mt-1 text-[#F8FAFC]">
+                <p className="text-md">
+                  🔥 Streak: {streakValue}{" "}
+                  {streakValue === 1 ? "day" : "days"}
+                </p>
 
-{canTrackStreak && (
-  <div className="flex justify-between items-center mt-1 text-[#F8FAFC]">
-    <p className="text-md">
-      🔥 Streak: {streakValue}{" "}
-      {streakValue === 1 ? "day" : "days"}
-    </p>
-
-    {doneToday ? (
-      <span className="text-[#F8FAFC] text-xs">✔️ Today done</span>
-    ) : (
-      <span className="text-yellow-300 font-medium text-xs">
-        ⏳ Not done today
-      </span>
-    )}
-  </div>
-)}
-
+                {doneToday ? (
+                  <span className="text-[#F8FAFC] text-xs">✔️ Today done</span>
+                ) : (
+                  <span className="text-yellow-300 font-medium text-xs">
+                    ⏳ Not done today
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         );
       })}
     </div>
   );
 }
-
-
-{/* <p className="text-md">
-🔥 Streak: {calculateWeeklyStreak(completedDates)}{" "}
-{calculateWeeklyStreak(completedDates) === 1 ? "day" : "days"}
-</p> */}

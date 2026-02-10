@@ -107,14 +107,14 @@ export default function Habits({
                   </span>
                 )}
 
-{habit.notes && (
-  <p className="text-sm text-[#F8FAFC] opacity-90 mt-1">
-    📝 {habit.notes}
-  </p>
-)}
+                {/* Notes */}
+                {habit.notes && (
+                  <p className="text-sm text-[#F8FAFC] opacity-90 mt-1">
+                    📝 {habit.notes}
+                  </p>
+                )}
 
-
-                {/* ✅ FIXED STREAK LINE — LEFT streak, RIGHT status */}
+                {/* ✅ Streak display */}
                 {canTrackStreak && (
                   <div className="flex justify-between items-center mt-1 text-[#F8FAFC]">
                     <p className="text-md">
@@ -123,9 +123,7 @@ export default function Habits({
                     </p>
 
                     {doneToday ? (
-                      <span className="text-[#F8FAFC] text-xs">
-                        ✔️ Today done
-                      </span>
+                      <span className="text-[#F8FAFC] text-xs">✔️ Today done</span>
                     ) : (
                       <span className="text-yellow-300 font-medium text-xs">
                         ⏳ Not done today
