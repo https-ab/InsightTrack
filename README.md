@@ -26,7 +26,7 @@
 ## 🖼️ Screenshots
 
 ![Dashboard](src/assets/screenshots/Dashboard.png)  
-![Expenses](src/assets/screenshots/Expenses.png)  
+![Expenses](src/assets/screenshots/Expense.png)  
 ![Habits](src/assets/screenshots/Habits.png)
 ![DarkMode](src/assets/screenshots/Dark_mode.png)
 
